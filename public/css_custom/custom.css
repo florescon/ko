@@ -1,0 +1,70 @@
+/**/
+.border-bottom-3px{
+    border-bottom: 3px solid red;
+}
+
+.border-bottom-3px-orange{
+    border-bottom: 3px solid orange;
+}
+
+.border-bottom-3px-yellow{
+    border-bottom: 3px solid yellow;
+}
+
+.gradient-box {
+  border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+}
+
+
+.input-search-color {
+  border-image: conic-gradient(red, green, blue, magenta, red) 1;
+}
+
+.input-search-blue {
+  border-image: 
+    linear-gradient(
+      to right, 
+      blue, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 1 100%;
+}
+
+
+.input-search-green {
+  border-image: 
+    linear-gradient(
+      to right, 
+      blue, 
+      green, 
+      rgba(0, 0, 0, 0)
+    ) 1 1 100%;
+}
+
+/**/
+
+/**/
+  .input-search:focus {
+    outline: none;
+  }
+  .input-search {
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    border-bottom: 1px solid blue;
+  }
+  .input-search ~ .border-input-search {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+  }
+  .input-search:focus ~ .border-input-search {
+    width: 100%;
+    transition: 0.8s;
+  }
+  .border-input-search {
+        border: 1px solid blue!important;
+    }
+/**/
