@@ -40,10 +40,10 @@
 
 </head>
   <body>
-    <table  width="550">
+    <table  width="650">
       <tr>
         <td rowspan="2" class="td-width">
-            <img src="{{ public_path('img/logo22-rotate.png') }}" class="rotate" width="140" style="
+            <img src="{{ public_path('img/logo22-rotate2.png') }}" class="rotate" width="100" style="
               /*border: 1px solid;*/
               margin-top: 40px;
             " 
@@ -66,14 +66,6 @@
             <i style="font-size: 35px;">{{ $product->code_label }}</i>
           </div>
         </td>
-        <td rowspan="2" style="padding-left: 6px;">
-          <img src="data:image/png;base64, {{ base64_encode(\QrCode::format('svg')->size(170)->generate($product->code_label)) }}" style=" margin-top: 40px;" />
-
-          <h2>
-            {{ '$'.$product->price_subproduct_label }}
-          </h2>
-
-        </td>
       </tr>
       <tr>
         <td align="center">
@@ -81,7 +73,9 @@
               {{ $product->parent->name }}
               {{ optional($product->parent->model_product)->name }}
               &nbsp;
-              <em>{{ $product->color_id ? $product->color->name : '' }} | {!! $product->size_id ? $product->size->name : '' !!}</em>
+              <em>{{ $product->color_id ? $product->color->name : '' }} | {!! $product->size_id ? $product->size->name : '' !!}
+              {{ '| $'.$product->price_subproduct_label }}
+              </em>
             </h2>
         </td>
       </tr>

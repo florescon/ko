@@ -127,35 +127,12 @@
 							<div class="card-body p-0">
 								<div class="shop_thumb position-relative">
 									<a class="card-img-top d-block overflow-hidden" href="{{ route('frontend.shop.show', $product->slug) }}"><img class="card-img-top" src="{{ asset('/storage/' . $product->file_name) }}" alt="{{ $product->name }}" onerror="this.src='/img/ga/not0.png';"></a>
-									<div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
+									{{-- <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
 										<div class="edlio"><a href="#" data-toggle="modal" data-target="#quickview" class="text-white fs-sm ft-medium"><i class="fas fa-eye mr-1"></i>Quick View</a></div>
-									</div>
+									</div> --}}
 								</div>
 							</div>
 							<div class="card-footer b-0 p-0 pt-2 bg-white">
-								<div class="d-flex align-items-start justify-content-between">
-									<div class="text-left">
-										<div class="form-check form-option form-check-inline mb-1">
-											<input class="form-check-input" type="radio" name="color1" id="white" checked="">
-											<label class="form-option-label small rounded-circle" for="white"><span class="form-option-color rounded-circle blc1"></span></label>
-										</div>
-										<div class="form-check form-option form-check-inline mb-1">
-											<input class="form-check-input" type="radio" name="color1" id="blue">
-											<label class="form-option-label small rounded-circle" for="blue"><span class="form-option-color rounded-circle blc2"></span></label>
-										</div>
-										<div class="form-check form-option form-check-inline mb-1">
-											<input class="form-check-input" type="radio" name="color1" id="yellow">
-											<label class="form-option-label small rounded-circle" for="yellow"><span class="form-option-color rounded-circle blc3"></span></label>
-										</div>
-										<div class="form-check form-option form-check-inline mb-1">
-											<input class="form-check-input" type="radio" name="color1" id="pink">
-											<label class="form-option-label small rounded-circle" for="pink"><span class="form-option-color rounded-circle blc4"></span></label>
-										</div>
-									</div>
-									<div class="text-right">
-										{{-- <button class="btn auto btn_love snackbar-wishlist"><i class="far fa-heart"></i></button> --}}
-									</div>
-								</div>
 								<div class="text-left">
 									<h5 class="fw-bolder fs-md mb-0 lh-1 mb-1"><a href="shop-single-v1.html">{{ $product->name }}</a></h5>
 									<div class="elis_rty"><span class="ft-bold text-dark fs-sm">${{ $product->price }}</span></div>

@@ -69,7 +69,7 @@ Correo: uniformeskodomi@gmail.com
                 <thead style="background-color: gray;">
                   <tr align="center">
                     <th>Concepto</th>
-                    <th>Cantidad</th>
+                    <th>Cant.</th>
                     <th>Precio</th>
                     <th>Total</th>
                   </tr>

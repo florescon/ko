@@ -79,7 +79,7 @@
                     :text="__('Logs')" />
 
                 <ul class="c-sidebar-nav-dropdown-items">
-                    <li class="c-sidebar-nav-item">
+                    {{-- <li class="c-sidebar-nav-item">
                         <x-utils.link
                             :href="route('log-viewer::dashboard')"
                             class="c-sidebar-nav-link"
@@ -90,7 +90,7 @@
                             :href="route('log-viewer::logs.list')"
                             class="c-sidebar-nav-link"
                             :text="__('Logs')" />
-                    </li>
+                    </li> --}}
                     <li class="c-sidebar-nav-item">
                         <x-utils.link
                             :href="route('admin.activity.index')"
@@ -314,7 +314,7 @@
                         @endif
 
 
-                            <li class="c-sidebar-nav-item">
+                            {{-- <li class="c-sidebar-nav-item">
                                 <x-utils.link
                                     :href="route('admin.setting.banner')"
                                     class="c-sidebar-nav-link"
@@ -346,13 +346,13 @@
                                     :text="__('Pages')"
                                     :active="activeClass(Route::is('admin.setting.pages.*'), 'c-active')"/>
                             </li>
-                        @endif
+                        @endif --}}
 
                 </ul>
             </li>
         @endif
 
-        @if ($logged_in_user->hasAllAccess() || ($logged_in_user->can('admin.access.document.list')))
+        {{-- @if ($logged_in_user->hasAllAccess() || ($logged_in_user->can('admin.access.document.list')))
             <li class="c-sidebar-nav-item">
                 <x-utils.link
                     class="c-sidebar-nav-link"
@@ -361,7 +361,7 @@
                     icon="c-sidebar-nav-icon cil-file"
                     :text="__('Documents')" />
             </li>
-        @endif
+        @endif --}}
 
         @if ($logged_in_user->hasAllAccess() || ($logged_in_user->can('admin.access.states_production.list')))
             <li class="c-sidebar-nav-item">

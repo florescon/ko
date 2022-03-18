@@ -49,7 +49,7 @@
 
 
             <div class="form-group row" wire:ignore>
-                <label for="lineselect" class="col-sm-2 col-form-label">@lang('Line')</label>
+                <label for="lineselect" class="col-sm-2 col-form-label">@lang('Category')</label>
 
                 <div class="col-sm-10" >
                     <select id="lineselect" class="custom-select" style="width: 100%;" aria-hidden="true" >
@@ -198,7 +198,7 @@
     <script>
       $(document).ready(function() {
         $('#lineselect').select2({
-          placeholder: '@lang("Choose line")',
+          placeholder: '@lang("Choose category")',
           width: 'resolve',
           theme: 'bootstrap4',
           allowClear: true,
