@@ -31,7 +31,7 @@
                                 data-paddingleft="[0,0,0,0]"
 
                                 style="z-index: 106; white-space: nowrap; font-size: 110px; line-height: 13px; font-weight: 900; color:#1f2029;font-family: 'Muli', sans-serif;">
-                            <div class="rs-looped">San José<br/>Uniformes </div></div>
+                            <div class="rs-looped">Kodomi </div></div>
 
                             <!-- LAYER NR. 12 -->
                             <div class="tp-caption tp-resizeme fade-hero" 

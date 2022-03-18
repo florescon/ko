@@ -32,7 +32,8 @@
     <tr>
         <td align="center">
             <pre>
-Blvd Félix Ramírez Rentería #430. Col: Pueblo de Moya, 
+Blvd Félix Ramírez Rentería #430.
+Col: Pueblo de Moya, 
 CP: 47430, Lagos de Moreno, Jal. 
 Telefono: 474 737 9847, 
 Correo: uniformeskodomi@gmail.com
@@ -110,7 +111,7 @@ Correo: uniformeskodomi@gmail.com
   </table>
 
     <br>
-    <table width="100%">
+{{--     <table width="100%">
         <tr>
             <td align="center">
                 <img src="data:image/png;base64, {{ base64_encode(\QrCode::format('svg')->size(100)->generate(route('frontend.track.show', $order->slug))) }} "/>
@@ -126,6 +127,6 @@ Correo: uniformeskodomi@gmail.com
 
         </tr>
     </table>
-
+ --}}
 </body>
 </html>

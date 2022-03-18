@@ -16,14 +16,14 @@ class LineEventListener
      */
     public function onCreated($event)
     {
-        activity('line')
+        activity('category')
             ->performedOn($event->line)
             ->withProperties([
-                'line' => [
+                'category' => [
                     'name' => $event->line->name,
                 ],
             ])
-            ->log(':causer.name creó línea :subject.name');
+            ->log(':causer.name creó categoría :subject.name');
     }
 
     /**
@@ -31,14 +31,14 @@ class LineEventListener
      */
     public function onUpdated($event)
     {
-        activity('line')
+        activity('category')
             ->performedOn($event->line)
             ->withProperties([
-                'line' => [
+                'category' => [
                     'name' => $event->line->name,
                 ],
             ])
-            ->log(':causer.name actualizó línea :subject.name');
+            ->log(':causer.name actualizó categoría :subject.name');
     }
 
     /**
@@ -46,9 +46,9 @@ class LineEventListener
      */
     public function onDeleted($event)
     {
-        activity('line')
+        activity('category')
             ->performedOn($event->line)
-            ->log(':causer.name eliminó línea :subject.name');
+            ->log(':causer.name eliminó categoría :subject.name');
     }
 
     /**
@@ -56,9 +56,9 @@ class LineEventListener
      */
     public function onRestored($event)
     {
-        activity('line')
+        activity('category')
             ->performedOn($event->line)
-            ->log(':causer.name restauró línea :subject.name');
+            ->log(':causer.name restauró categoría :subject.name');
     }
 
     /**

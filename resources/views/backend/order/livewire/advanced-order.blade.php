@@ -19,7 +19,7 @@
                             </div>
                             <h2 class="mt-2"> &nbsp;Bienvenido a opciones avanzadas</h2> 
 
-                            <h4>
+                            {{-- <h4>
                                 &nbsp;{!! $order->type_order !!}
                                 Folio #{{ $order->id }}, @lang('Order track'): {{ $order->slug }}
                       <a href="{{ route('frontend.track.show', $order->slug) }}" target=”_blank”>
@@ -28,7 +28,7 @@
                         </span>
                       </a>
 
-                            </h4>
+                            </h4> --}}
                             <span> &nbsp; {{ $order->comment }} </span>
                         </div>
                     </div>

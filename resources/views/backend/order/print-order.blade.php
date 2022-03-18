@@ -33,10 +33,10 @@
         <img class="" src="{{ asset('img/logo22.png') }}" width="100" alt="CoreUI Logo">
         <h3 class="pt-md-2 text-primary font-weight-bold ml-1 ">{{ __(appName()) }}</h3>
       </div>
-      <p class="card-text mb-0">Margarito Gonzalez Rubio #857</p>
-      <p class="card-text mb-0">Col. El Refugio, Lagos de Moreno Jal.</p>
-      <p class="card-text mb-0">ventas@sj-uniformes.com </p>
-      <p class="card-text mb-0">47 47 42 30 00 </p>
+      <p class="card-text mb-0">{{ setting('site_address') }}</p>
+      <p class="card-text mb-0">{{ setting('site_email') }}</p>
+      <p class="card-text mb-0">{{ setting('site_phone') }} </p>
+
     </div>
     <div class="mt-md-0 mt-2">
       <h4 class="font-weight-bold text-right mb-1">
@@ -105,7 +105,7 @@
       </p>
       @endif
       <br>
-      <br>
+{{--       <br>
       <p class="card-text mb-0">
         &nbsp;
         {!! QrCode::size(100)->gradient(55, 115, 250, 105, 5, 70, 'radial')->generate(route('frontend.track.show', $order->slug)); !!}
@@ -119,7 +119,7 @@
             (Disponible 1 mes)
         </em>
       </p>
-
+ --}}
     </div>
     <div class="col-md-6 d-flex justify-content-end order-md-2 order-1">
       <div class="invoice-total-wrapper">

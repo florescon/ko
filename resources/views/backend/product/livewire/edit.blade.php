@@ -88,11 +88,11 @@
 
 			        <p class="card-text mt-3"><strong>@lang('Total stock'): </strong>{{ $model->total_stock }}</p>
 
-			        <p class="card-text"><strong>@lang('Line'):</strong> 
+			        <p class="card-text"><strong>@lang('Category'):</strong> 
 			            <x-utils.undefined :data="optional($model->line)->name"/>
 
 					    <div x-data="{ show: false }" class="d-inline">
-					        <button class="badge badge-light {{ $model->line_id ?: 'pulsingButton'  }}" @click="show = !show"> {{ $model->line_id ? __('Change line') : __('Choose line') }}</button>
+					        <button class="badge badge-light {{ $model->line_id ?: 'pulsingButton'  }}" @click="show = !show"> {{ $model->line_id ? __('Change category') : __('Choose category') }}</button>
 					        <div x-show="show" class="mt-2" wire:ignore>
 		                        <select id="lineselect" class="custom-select" style="width: 100%;" aria-hidden="true" >
 		                        </select>
@@ -100,7 +100,7 @@
 
 			                @if($line_id)
 						        <div x-show="show">
-				                	<a role="button" wire:click="saveLine" class="btn btn-sm btn-primary float-right mt-2 text-white" type="submit">@lang('Save line')</a>
+				                	<a role="button" wire:click="saveLine" class="btn btn-sm btn-primary float-right mt-2 text-white" type="submit">@lang('Save category')</a>
 				                </div>
 			                @endif
 					    </div>

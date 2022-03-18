@@ -71,7 +71,7 @@ return [
      */
 
     'download' => [
-        'prefix' => 'sanjose-',
+        'prefix' => 'kodomi-',
 
         'extension' => 'log',
     ],

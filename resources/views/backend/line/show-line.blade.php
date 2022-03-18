@@ -1,6 +1,6 @@
 <x-utils.modal id="showModal" width="modal-dialog-centered">
   <x-slot name="title">
-    @lang('Show line')
+    @lang('Show category')
   </x-slot>
 
   <x-slot name="content">
@@ -19,6 +19,17 @@
           <th scope="row">@lang('Slug')</th>
           <td>   
             <x-utils.undefined :data="$slug"/>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">@lang('Image')</th>
+          <td>
+            @if($image)   
+              <img class="card-img-top" src="{{ asset('/storage/' . $image) }}" alt="{{ $name }}">
+            @else
+              @lang('undefined')
+            @endif
           </td>
         </tr>
 

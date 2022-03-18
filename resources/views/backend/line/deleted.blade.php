@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('Line'))
+@section('title', __('Category'))
 
 
 @section('breadcrumb-links')
@@ -11,7 +11,7 @@
 
     <x-backend.card>
         <x-slot name="header">
-            <strong style="color: red;"> @lang('Deleted lines') </strong>  
+            <strong style="color: red;"> @lang('Deleted categories') </strong>  
         </x-slot>
 
         <x-slot name="headerActions">

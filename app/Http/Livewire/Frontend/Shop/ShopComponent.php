@@ -210,9 +210,9 @@ class ShopComponent extends Component
     {
         $colors = Color::inRandomOrder()->limit(8)->get();
         $sizes = Size::inRandomOrder()->limit(5)->get();
-        $lines = Line::inRandomOrder()->limit(6)->get();
+        $lines = Line::orderBy('name', 'asc')->limit(12)->get();
 
-		return view('frontend.shop.livewire.shop-component',[
+		return view('frontend.shop_ku.livewire.shop-component',[
             'products' => $this->rows,
             'colors' => $colors,
             'sizes' => $sizes,

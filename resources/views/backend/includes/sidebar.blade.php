@@ -209,7 +209,7 @@
                                 class="c-sidebar-nav-link"
                                 :href="route('admin.line.index')"
                                 :active="activeClass(Route::is('admin.line.*'), 'c-active')"
-                                :text="__('Lines')" />
+                                :text="__('Categories')" />
                         </li>
                     @endif
 

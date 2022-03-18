@@ -65,9 +65,9 @@
                                                 <tbody>
                                                     @foreach($orders as $order)
                                                     <tr class="table-tr"
-                                                        @if($order->slug)
-                                                            data-url="{{ route('frontend.track.show', $order->slug) }}"
-                                                        @endif
+                                                        {{-- @if($order->slug) --}}
+                                                            {{-- data-url="{{ route('frontend.track.show', $order->slug) }}" --}}
+                                                        {{-- @endif --}}
                                                     >
                                                         <td>{{ $order->id }}</td>
                                                         <td>{{ $order->slug }}</td>

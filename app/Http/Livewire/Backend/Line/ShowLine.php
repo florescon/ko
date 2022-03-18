@@ -9,6 +9,8 @@ class ShowLine extends Component
 {
     public $name, $slug, $created, $updated;
 
+    public $image;
+
     protected $listeners = ['show'];
 
     public function show($id)
@@ -18,6 +20,7 @@ class ShowLine extends Component
         $this->slug = $record->slug;
         $this->created = $record->created_at;
         $this->updated = $record->updated_at;
+        $this->image = $record->file_name;
     }
 
     public function render()

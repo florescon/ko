@@ -15,7 +15,7 @@ class ShopController extends Controller
 	 */
 	public function index()
 	{
-	    return view('frontend.shop.index');
+	    return view('frontend.shop_ku.index');
 	}
 
     public function show(Product $shop)
@@ -25,9 +25,9 @@ class ShopController extends Controller
     		abort(404);
     	}
 
-        $related_products = Product::with('line')->whereNull('parent_id')->inRandomOrder()->onlyActive()->limit(4)->get();
+        $related_products = Product::with('line')->whereNull('parent_id')->inRandomOrder()->onlyActive()->limit(8)->get();
 
-        return view('frontend.shop.show', compact('shop', 'related_products'));
+        return view('frontend.shop_ku.show', compact('shop', 'related_products'));
     }
 
     public function datasheet(Product $shop)

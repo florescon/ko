@@ -84,7 +84,7 @@ class Order extends Model
 
     public function getFullSlugAttribute(): string
     {
-        return 'sju'. ' ' . Str::random(6);
+        return 'kod'. ' ' . Str::random(6);
     }
 
     /**

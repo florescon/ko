@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('Line'))
+@section('title', __('Category'))
 
 @section('breadcrumb-links')
     @include('backend.line.includes.breadcrumb-links')
@@ -10,7 +10,7 @@
 
     <x-backend.card>
         <x-slot name="header">
-            <strong style="color: #0061f2;"> @lang('Lines') </strong>
+            <strong style="color: #0061f2;"> @lang('Categories') </strong>
         </x-slot>
 
         @if ($logged_in_user->hasAllAccess() || $logged_in_user->can('admin.access.line.create'))
@@ -22,7 +22,7 @@
                     style="color: green;"
                     wire:click="$emitTo('backend.line.create-line', 'createmodal')" 
                     data-target="#createLine"
-                    :text="__('Create line')"
+                    :text="__('Create category')"
                 />
             </x-slot>
         @endif

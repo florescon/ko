@@ -26,7 +26,7 @@ class LineTable extends TableComponent
     public $perPageOptions = ['10', '25', '50'];
 
     public $exports = ['csv', 'xls', 'xlsx'];
-    public $exportFileName = 'lines';
+    public $exportFileName = 'categories';
 
     public $clearSearchButton = true;
     

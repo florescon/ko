@@ -88,5 +88,6 @@ class Line extends Model
     protected $fillable = [
         'name',
         'slug',
+        'file_name',
     ];
 }

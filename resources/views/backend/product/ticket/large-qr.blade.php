@@ -30,12 +30,12 @@
   <body style="margin-top: 135px;">
       <table width="100%">
         {{-- @if($product->code) --}}
-          <tr>
+{{--           <tr>
               <td align="center">
                   <img src="data:image/png;base64, {{ base64_encode(\QrCode::format('svg')->size(140)->generate(route('frontend.track.show', $product->code_label))) }} "/>
               </td>
           </tr>
-       {{-- @endif --}}
+ --}}       {{-- @endif --}}
         <tr>
           <td align="center">
             <h2>

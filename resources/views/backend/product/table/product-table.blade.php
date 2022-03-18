@@ -48,7 +48,7 @@
 		      @if(!$product->line_id)
 			      <p class="card-text">
 			      	<small class="text-danger">
-			      		@lang('Undefined line')
+			      		@lang('Undefined category')
 			      	</small>
 			      </p>
 		      @endif

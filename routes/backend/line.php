@@ -13,7 +13,7 @@ Route::group([
         ->middleware('permission:admin.access.line.list')
         ->breadcrumbs(function (Trail $trail) {
             $trail->parent('admin.dashboard')
-                ->push(__('Line Management'), route('admin.line.index'));
+                ->push(__('Category Management'), route('admin.line.index'));
         });
 
     Route::get('deleted', [LineController::class, 'deleted'])
@@ -21,7 +21,7 @@ Route::group([
         ->middleware('permission:admin.access.line.deleted')
         ->breadcrumbs(function (Trail $trail) {
             $trail->parent('admin.line.index')
-                ->push(__('Deleted lines'), route('admin.line.deleted'));
+                ->push(__('Deleted categories'), route('admin.line.deleted'));
         });
 
     Route::group(['prefix' => '{line}'], function () {

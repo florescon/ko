@@ -11,16 +11,15 @@
                 <img src="{{ asset('img/logo22.png') }}" width="90" alt="CoreUI Logo">
                 <h3 class="text-primary invoice-logo">{{ __(appName()) }}</h3>
               </div>
-              <p class="card-text mb-0">Margarito Gonzalez Rubio #857</p>
-              <p class="card-text mb-0">Col. El Refugio, Lagos de Moreno Jal.</p>
-              <p class="card-text mb-0">ventas@sj-uniformes.com </p>
-              <p class="card-text mb-0">47 47 42 30 00 </p>
+              <p class="card-text mb-0">{{ setting('site_address') }}</p>
+              <p class="card-text mb-0">{{ setting('site_email') }}</p>
+              <p class="card-text mb-0">{{ setting('site_phone') }} </p>
             </div>
             <div class="mt-md-0 mt-2">
               <h4 class="invoice-title">
                 <p class="text-uppercase">
                   @lang('Order')
-                  <span class="invoice-number">#{{ 'SJU-'. Str::of($model->id)->padLeft(5, 0) }}</span>
+                  <span class="invoice-number">#{{ 'KOD-'. Str::of($model->id)->padLeft(5, 0) }}</span>
                 </p>
               </h4>
               <div class="invoice-date-wrapper">
@@ -147,7 +146,7 @@
         </div>
       </div>
 
-      @if($model->slug)
+{{--       @if($model->slug)
         <div class="card">
           <div class="card-body text-center">
             <h5> @lang('Tracking number'): </h5>
@@ -161,7 +160,7 @@
           </div>
         </div>
       @endif
-
+ --}}
       <div class="card">
           @if($model->user_id || $model->departament_id)
             <div class="card-footer text-center">
@@ -192,13 +191,13 @@
           @endif
       </div>
 
-      <div class="card">
+{{--       <div class="card">
         <div class="card-body text-center">
           {!! QrCode::size(100)->gradient(55, 115, 250, 105, 5, 70, 'radial')->generate(route('frontend.track.show', $model->slug)); !!}
           <p class="mt-4">@lang('Scan me for go track')</p>
         </div>
       </div>
-
+ --}}
     </div>
     <!-- /Invoice Actions -->
 

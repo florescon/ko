@@ -84,6 +84,6 @@ class ShopParametersComponent extends Component
         $model = Product::with('pictures')->findOrFail($this->product_parent);
         $attributes = Product::with('children')->findOrFail($this->product_parent);
 
-        return view('frontend.shop.livewire.shop-parameters-component')->with(compact('model', 'attributes'));
+        return view('frontend.shop_ku.livewire.shop-parameters-component')->with(compact('model', 'attributes'));
     }
 }

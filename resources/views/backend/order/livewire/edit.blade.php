@@ -39,7 +39,7 @@
     <div class="row ">
       <div class="col-12 col-sm-12 {{ $orderExists ? 'col-md-8' : 'col-md-12' }}">
         <div class="card card-product_not_hover card-flyer-without-hover">
-          @if($slug)
+          {{-- @if($slug)
             <div class="card-header">
               @lang('Tracking number'): <strong class="text-primary">{{ $slug }}</strong>
               <a href="{{ route('frontend.track.show', $slug) }}" target=”_blank”>
@@ -49,20 +49,20 @@
                 </span>
               </a>
             </div>
-          @endif
+          @endif --}}
           <div class="card-body">
             <h5 class="card-title">#{{ $order_id }}</h5>
             <p class="card-text">
               <div class="form-row ">
                 
-                @if($slug)
+                {{-- @if($slug)
                   <div class="col-md-3 mb-3">
                     <div class="visible-print text-left" wire:ignore>
                       {!! QrCode::size(100)->gradient(55, 115, 250, 105, 5, 70, 'radial')->generate(route('frontend.track.show', $slug)); !!}
                       <p class="mt-2">@lang('Scan me for go track')</p>
                     </div>
                   </div>
-                @endif
+                @endif --}}
 
                 <div class="col-md-9 mb-3">
                   <div class="row">
